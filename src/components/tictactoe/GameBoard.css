@@ -1,0 +1,144 @@
+/* CSS for all components */
+.status {
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    color: white;
+}
+.boxes {
+    display: flex;
+    height: 120px;
+    width: 120px;
+    background: #1f3540;
+    border: 4px solid #0f1b21;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.boxes img {
+    height: 100px;
+    width: 100px;
+}
+.board-row {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.game-board {
+    flex: 1;
+    width: 30vw;
+}
+.congratulation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+.congratulation img{
+    height: 40vh;
+    width:-webkit-fill-available;
+}
+.game-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.player-history {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.btn ,.reset{
+    padding: 2px;
+    font-size: 20px;
+    border:2px solid #e77111;
+    background-color: black;
+    color: white;
+border-radius: 10px;
+animation: backgroundbutton 3s;
+animation-iteration-count: infinite;
+}
+@keyframes backgroundbutton {
+    0%{
+border-color: aqua;
+    }
+    25%{
+border-color: rgb(28, 184, 41);
+    }
+    50%{
+border-color: rgb(255, 242, 0);
+    }
+    75%{
+border-color: rgb(0, 0, 0);
+    }
+    100%{
+border-color: rgb(247, 35, 35);
+    }
+}
+/* Add media query for screens smaller than 600px */
+@media screen and (max-width: 600px) {
+    .game {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .board-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .game-board {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .status {
+        font-size: 20px;
+    }
+    .boxes {
+        height: 50px;
+        width: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+    .boxes img {
+        height: 20px;
+        width: 20px;
+    }
+    .game-info {
+        margin-top: 20px;
+        width: min-content;
+        align-items: center;
+    }
+    .congratulation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .congratulation img{
+        height: 100px;
+        width:-webkit-fill-available;
+    }
+    .congratulation button{
+        margin-top: 5px;
+        color: white;
+        background-color: #0f1b21;
+        border:2px solid black;
+        border-radius: 10px;
+        padding: 5px;
+    }
+}
